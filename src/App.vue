@@ -11,4 +11,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
+
+:root, body, html, #app {
+  overflow: hidden;
+}
 </style>

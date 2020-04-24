@@ -1,5 +1,5 @@
 <template>
-  <div class="panel-wrapper" :style="`width: ${this.width}`">
+  <div class="panel-wrapper" :style="``">
     <div class="panel-header">
       <div class="panel-dots">
         <div class="panel-dot" style="background: #ff796f"/>
@@ -51,7 +51,7 @@ export default {
     },
     width: {
       type: String,
-      default: "550px"
+      default: ""
     }
   },
   computed: {
@@ -75,14 +75,28 @@ export default {
 .panel-wrapper {
   /* border: 2px solid red; */
   border-radius: 6px 6px 0px 0px;
+  box-sizing: border-box;
+  max-width: calc(100% - 20px);
   overflow: hidden;
   box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
               0 2px 2px rgba(0,0,0,0.11), 
-              0 4px 4px rgba(0,0,0,0.11), 
-              0 8px 8px rgba(0,0,0,0.11), 
-              0 16px 16px rgba(0,0,0,0.11), 
-              0 32px 32px rgba(0,0,0,0.11);
+              0 4px 4px rgba(0,0,0,0.11);
+  }
+
+@media (orientation: landscape) {
+  :root, body, html, #app {
+    overflow: auto;
+    height: auto;
+  }
 }
+
+@media (orientation: portrait) {
+  .panel-wrapper {
+    height: 100%;
+  }
+  
+}
+
 .panel-header {
   background: #b8b8b8;
   height: 25px;

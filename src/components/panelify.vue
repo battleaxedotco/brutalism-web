@@ -26,7 +26,10 @@ export default {
     extName: String,
     appName: String,
     theme: String,
-    width: String,
+    width: {
+      type: String,
+      default: '100%'
+    },
     height: String,
     gradient: Number,
     src: String
@@ -255,7 +258,7 @@ export default {
 @import url(//fonts.googleapis.com/css?family=Open+Sans);
 .panelify-wrapper {
   display: flex;
-  max-width: 90vw;
+  box-sizing: border-box;
 }
 .panelify-controller-button {
   width: 20px;
