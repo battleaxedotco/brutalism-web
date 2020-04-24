@@ -1,19 +1,9 @@
 # brutalism-web
 
-## Project setup
-```
-npm install
-```
+## [Check out the demo here](https://xenodochial-knuth-23208d.netlify.app/)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Online version of the [brutalism-api panel](https://github.com/Inventsable/brutalism-api) to demonstrate [Battleaxe's brutalism component library](https://github.com/Inventsable/brutalism):
 
-### Compiles and minifies for production
-```
-npm run build
-```
+![](./public/web.png)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+> Left is browser demo, right is real Adobe panel. Same code, same functionality.
