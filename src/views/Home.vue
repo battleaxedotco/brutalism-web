@@ -1,7 +1,7 @@
 <template>
   <div class="centered">
       <div class="sample-wrapper">
-        <example :route="hashPath" name="brutalism-api" app="ILST" theme="darkest" :gradient="0" height="500px" />
+        <example :route="hashPath" name="brutalism-api" app="ILST" theme="darkest" :gradient="0" height="600px" />
       </div>
     </div>
 </template>
