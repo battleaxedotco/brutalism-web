@@ -15,7 +15,8 @@ export default {
   },
   computed: {
     hashPath() {
-      return this.$route.hash.replace(/^\#\//, '');
+      let target = this.$route.hash.length ? this.$route.hash : this.$route.path;
+      return target.replace(/^\#?\//, '');
     }
   },
   mounted() {
