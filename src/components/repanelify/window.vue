@@ -95,6 +95,9 @@ export default {
         )};
       `;
     },
+    mounted() {
+      console.log(this.src)
+    }
   }
 }
 </script>
