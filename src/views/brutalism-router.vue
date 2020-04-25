@@ -2,11 +2,12 @@
   <div class="centered-wrapper">
       <div class="sample-wrapper">
         <Panelify 
-          :url="url" 
-          :route="hashPath" 
-          name="brutalism-api" 
+          :url="url"
+          route="" 
+          name="brutalism-router" 
           app="ILST" 
           theme="darkest" 
+          :gradient="0" 
           height="666px" 
         />
       </div>
@@ -27,12 +28,6 @@ export default {
   components: {
     example: require('../components/repanelify').default
   },
-  computed: {
-    hashPath() {
-      let target = this.$route.hash.length ? this.$route.hash : this.$route.path;
-      return target.replace(/^\#?\//, '');
-    }
-  }
 }
 </script>
 
