@@ -20,4 +20,29 @@ export default {}
 :root, body, html, #app {
   overflow: hidden;
 }
+
+:root, html, body {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  font-size: 12px;
+}
+
+.centered-wrapper {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.sample-wrapper {
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 </style>

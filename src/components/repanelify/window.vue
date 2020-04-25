@@ -32,6 +32,10 @@ export default {
       type: String,
       default: 'ILST',
     },
+    url: {
+      type: String,
+      default: 'https://zen-ramanujan-97e3d0.netlify.app/#'
+    },
     route: {
       type: String,
       default: '/'
@@ -55,7 +59,7 @@ export default {
   },
   computed: {
     src() {
-      return `https://zen-ramanujan-97e3d0.netlify.app/#${this.route}`
+      return `${this.url}${this.route}`
     },
     // name() {
     //   return `https://tender-johnson-4cd350.netlify.com/#/${this.page}/${this.app}/${this.realTheme}`
