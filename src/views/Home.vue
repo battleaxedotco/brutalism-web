@@ -1,7 +1,7 @@
 <template>
   <div class="centered">
       <div class="sample-wrapper">
-        <example page="" name="brutalism-api" app="ILST" theme="darkest" :gradient="0" height="500px" />
+        <example :route="hashPath" name="brutalism-api" app="ILST" theme="darkest" :gradient="0" height="500px" />
       </div>
     </div>
 </template>
@@ -11,8 +11,13 @@
 export default {
   name: 'Home',
   components: {
-    example: require('../components/example.vue').default
-  }
+    example: require('../components/repanelify').default
+  },
+  computed: {
+    hashPath() {
+      return this.$route.hash.replace(/^\#\//, '');
+    }
+  },
 }
 </script>
 
@@ -21,9 +26,7 @@ export default {
   margin: 0px;
   padding: 0px;
   width: 100vw;
-  /* height: 100vh; */
   font-size: 12px;
-  /* overflow: hidden; */
 }
 
 .centered {

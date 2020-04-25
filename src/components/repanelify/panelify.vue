@@ -8,7 +8,7 @@
             <hamburger :color="getMenuColor()" />
           </div>
         </div>
-        <div v-if="!isBlock" style="padding-right: 25px;" class="block-panel-menu">
+        <div v-if="!isBlock" style="padding-right: 12px; padding-bottom: 4px;" class="block-panel-menu">
           <hamburger :color="getMenuColor()" />
         </div>
       </div>
@@ -132,16 +132,20 @@ export default {
     },
     getWrapperStyle() {
       return `
+        box-sizing: border-box;
         width: ${this.width};
         height: ${this.height};
-        border: ${this.isBlock ? "4px" : "2px"} solid ${starlette.getColorAs(
+        border-style: solid;
+        border-color: ${starlette.getColorAs(
         "color-header-border",
         this.appName,
         this.newTheme || this.theme,
         this.newGradient || this.newGradient == 0
           ? this.newGradient
           : this.gradient || null
-      )};
+        )};
+        border: ${this.isBlock ? "0px 4px 4px 4px" : "0px 2px 2px 2px"};
+        border-top-width: 0px !important;
         background-color: ${starlette.getColorAs(
           "color-bg",
           this.appName,

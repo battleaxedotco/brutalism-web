@@ -1,13 +1,9 @@
 <template>
   <div class="panel-wrapper" :style="``">
-    <div class="panel-header">
-      <div class="panel-dots">
-        <div class="panel-dot" style="background: #ff796f"/>
-        <div class="panel-dot" style="background: #ffd071" />
-        <div class="panel-dot" style="background: #64c255" />
-      </div>
+    <div class="panel-header" :style="getWrapperStyle()">
       <div class="panel-title">
-        {{app}}
+        <header-icon icon="arrows" style="margin-right: 4px;" />
+        <header-icon icon="x" />
       </div>
     </div>
     <panelify
@@ -19,10 +15,13 @@
       :height="height"
       :gradient="gradient" 
     />
+    <div class="panel-footer" :style="getFooterStyle()"></div>
   </div>
 </template>
 
 <script>
+import starlette from 'starlette'
+
 export default {
   props: {
     name: {
@@ -33,9 +32,9 @@ export default {
       type: String,
       default: 'ILST',
     },
-    page: {
+    route: {
       type: String,
-      default: 'buttons'
+      default: '/'
     },
     theme: {
       type: String,
@@ -56,7 +55,7 @@ export default {
   },
   computed: {
     src() {
-      return `https://zen-ramanujan-97e3d0.netlify.app/#/${this.page}`
+      return `https://zen-ramanujan-97e3d0.netlify.app/#${this.route}`
     },
     // name() {
     //   return `https://tender-johnson-4cd350.netlify.com/#/${this.page}/${this.app}/${this.realTheme}`
@@ -66,14 +65,42 @@ export default {
     }
   },
   components: {
-    panelify: require('../components/panelify').default,
+    panelify: require('./panelify').default,
+    "header-icon": require('./svg.vue').default,
+  },
+  methods: {
+    getFooterStyle() {
+      return `
+        background-color: ${starlette.getColorAs(
+          "color-bg",
+          this.app,
+          this.theme,
+          this.gradient || null
+        )};
+      `
+    },
+    getWrapperStyle() {
+      return `
+        background-color: ${starlette.getColorAs(
+          "color-header",
+          this.app,
+          this.theme,
+          this.gradient || null
+        )};
+        color: ${starlette.getColorAs(
+          "color-btn-pill-border",
+          this.app,
+          this.theme,
+          this.gradient || null
+        )};
+      `;
+    },
   }
 }
 </script>
 
 <style>
 .panel-wrapper {
-  /* border: 2px solid red; */
   border-radius: 6px 6px 0px 0px;
   box-sizing: border-box;
   max-width: calc(100% - 20px);
@@ -82,6 +109,42 @@ export default {
               0 2px 2px rgba(0,0,0,0.11), 
               0 4px 4px rgba(0,0,0,0.11);
   }
+
+
+
+.panel-header {
+  background: var(--color-header-dark);
+  height: 12px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 0px 1.5px 0px;
+}
+.panel-dots {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.panel-footer {
+  width: 100%;
+  height: 8px;
+}
+
+.panel-title {
+  margin-right: 4px;
+  /* color: #232323; */
+}
+.panel-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 20px;
+  margin: 0px 5px;
+}
 
 @media (orientation: landscape) {
   :root, body, html, #app {
@@ -94,32 +157,5 @@ export default {
   .panel-wrapper {
     height: 100%;
   }
-  
-}
-
-.panel-header {
-  background: #b8b8b8;
-  height: 25px;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-.panel-dots {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-.panel-title {
-  margin-right: 10px;
-  color: #232323;
-}
-.panel-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 20px;
-  margin: 0px 5px;
 }
 </style>
