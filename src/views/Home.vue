@@ -18,6 +18,9 @@ export default {
       return this.$route.hash.replace(/^\#\//, '');
     }
   },
+  mounted() {
+    console.log('Hello', this.$route)
+  }
 }
 </script>
 
