@@ -3,10 +3,10 @@
       <div class="sample-wrapper">
         <Panelify 
           :url="url"
-          route="" 
+          :route="hashPath" 
           name="brutalism-router" 
-          app="ILST" 
-          theme="darkest" 
+          app="AEFT" 
+          theme="gradient" 
           :gradient="0" 
           height="666px" 
         />
@@ -23,11 +23,14 @@ export default {
     Panelify
   },
   data: () => ({
-    url: ''
+    url: 'https://keen-mcnulty-28a063.netlify.app/#'
   }),
-  components: {
-    example: require('../components/repanelify').default
-  },
+  computed: {
+    hashPath() {
+      let target = this.$route.hash.length ? this.$route.hash : this.$route.path;
+      return target.replace(/^\#?\//, '');
+    }
+  }
 }
 </script>
 
