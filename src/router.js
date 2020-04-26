@@ -29,12 +29,12 @@ const routes = [
     component: () => import("./views/brutalism-basic.vue")
   },
   {
-    path: "/brutalism-router",
+    path: "/brutalism-router/:parent?",
     name: 'router',
     component: () => import("./views/brutalism-router.vue")
   },
   {
-    path: "/brutalism-vuex",
+    path: "/brutalism-vuex/:parent?",
     name: 'vuex',
     component: () => import("./views/brutalism-vuex.vue")
   }
