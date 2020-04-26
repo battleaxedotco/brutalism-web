@@ -1,15 +1,11 @@
 <template>
-  <div class="centered-wrapper">
-      <div class="sample-wrapper">
-        <Panelify 
-          :route="hashPath" 
-          name="brutalism-api" 
-          app="ILST" 
-          theme="darkest" 
-          height="666px" 
-        />
-      </div>
-    </div>
+  <Panelify 
+    :route="hashPath" 
+    name="brutalism-api" 
+    app="ILST" 
+    theme="darkest" 
+    height="100%" 
+  />
 </template>
 
 <script>

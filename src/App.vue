@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <router-view/>
+    <div class="centered-wrapper">
+      <div class="sample-wrapper">
+        <router-view/>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -19,6 +23,7 @@ export default {}
 
 :root, body, html, #app {
   overflow: hidden;
+  height: 100%;
 }
 
 :root, html, body {
@@ -40,9 +45,11 @@ export default {}
   padding: 10px;
 }
 .sample-wrapper {
+  max-height: 700px;
   max-width: 800px;
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
   justify-content: center;
 }
 </style>

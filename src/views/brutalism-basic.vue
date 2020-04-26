@@ -1,17 +1,13 @@
 <template>
-  <div class="centered-wrapper">
-      <div class="sample-wrapper">
-        <Panelify 
-          :url="url"
-          route="" 
-          name="brutalism-basic" 
-          app="ILST" 
-          theme="darkest" 
-          :gradient="0" 
-          height="666px" 
-        />
-      </div>
-    </div>
+  <Panelify 
+    :url="url"
+    route="" 
+    name="brutalism-basic" 
+    app="ILST" 
+    theme="darkest" 
+    :gradient="0" 
+    height="100%" 
+  />
 </template>
 
 <script>
