@@ -1,6 +1,6 @@
 # brutalism-web
 
-Online version of the [brutalism-api panel](https://github.com/battleaxedotco/brutalism-api) and all bombino templates to demonstrate [Battleaxe's brutalism component library](https://github.com/battleaxedotco/brutalism) and templates with the [bombino Vue-CLI tooling](https://github.com/Inventsable/bombino).
+Online version of the [brutalism-api panel](https://github.com/battleaxedotco/brutalism-api) to demonstrate [Battleaxe's brutalism component library](https://github.com/battleaxedotco/brutalism) and templates with the [bombino Vue-CLI tooling](https://github.com/Inventsable/bombino).
 
 > In all screenshots below, the left is Illustrator, center is browser, and right is After effects. Same code, same functionality.
 
