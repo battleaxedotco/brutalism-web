@@ -30,6 +30,9 @@ export default {
       let target = this.$route.hash.length ? this.$route.hash : this.$route.path;
       return target.replace(/^\#?\//, '').replace('vuex', '');
     }
+  },
+  mounted() {
+    console.log('Testing URL:', `${this.url}${this.hashPath}`)
   }
 }
 </script>
