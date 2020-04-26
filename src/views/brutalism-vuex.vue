@@ -3,10 +3,11 @@
       <div class="sample-wrapper">
         <Panelify 
           :url="url" 
-          route="" 
+          :route="hashPath" 
           name="brutalism-vuex" 
-          app="ILST" 
-          theme="darkest" 
+          app="AEFT" 
+          theme="gradient"
+          :gradient="0"
           height="666px" 
         />
       </div>
@@ -22,10 +23,13 @@ export default {
     Panelify
   },
   data: () => ({
-    url: ''
+    url: 'https://peaceful-fermi-6ddbc0.netlify.app/#/'
   }),
-  components: {
-    example: require('../components/repanelify').default
+  computed: {
+    hashPath() {
+      let target = this.$route.hash.length ? this.$route.hash : this.$route.path;
+      return target.replace(/^\#?\//, '');
+    }
   }
 }
 </script>
