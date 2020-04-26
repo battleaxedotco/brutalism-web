@@ -24,17 +24,17 @@ const routes = [
     component: () => import("./views/API.vue")
   },
   {
-    path: "/brutalism-basic",
+    path: "/basic",
     name: 'basic',
     component: () => import("./views/brutalism-basic.vue")
   },
   {
-    path: "/brutalism-router/:parent?",
+    path: "/router/:parent?",
     name: 'router',
     component: () => import("./views/brutalism-router.vue")
   },
   {
-    path: "/brutalism-vuex/:parent?",
+    path: "/vuex/:parent?",
     name: 'vuex',
     component: () => import("./views/brutalism-vuex.vue")
   }
