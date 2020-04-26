@@ -2,8 +2,16 @@
 
 ## [Check out the demo here](https://brutalism.netlify.app/)
 
-Online version of the [brutalism-api panel](https://github.com/Inventsable/brutalism-api) to demonstrate [Battleaxe's brutalism component library](https://github.com/Inventsable/brutalism):
+Online version of the [brutalism-api panel](https://github.com/battleaxedotco/brutalism-api) and all bombino templates to demonstrate [Battleaxe's brutalism component library](https://github.com/battleaxedotco/brutalism). 
 
-![](./src/assets/template.png)
+> In all screenshots below, the left is Illustrator, center is browser, and right is After effects.
 
-> Left is browser demo, right is real Adobe panel. Same code, same functionality.
+## API
+
+#### Demo | Template
+
+![](./src/assets/api.png)
+
+## API
+
+![](./src/assets/api.png)

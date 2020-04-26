@@ -28,7 +28,7 @@ export default {
   computed: {
     hashPath() {
       let target = this.$route.hash.length ? this.$route.hash : this.$route.path;
-      return target.replace(/^\#?\//, '').replace('brutalism-vuex', '');
+      return target.replace(/^\#?\//, '').replace('vuex', '');
     }
   }
 }

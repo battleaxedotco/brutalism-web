@@ -24,11 +24,7 @@ export default {
   },
   data: () => ({
     url: 'https://frosty-mcclintock-6929d0.netlify.app/'
-  }),
-  mounted() {
-    console.log('Hello?')
-    console.log(this.url)
-  }
+  })
 }
 </script>
 
