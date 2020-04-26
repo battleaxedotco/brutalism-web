@@ -33,5 +33,3 @@ Online version of the [brutalism-api panel](https://github.com/battleaxedotco/br
 #### [Demo](https://brutalism.netlify.app/#/vuex) | [Template](https://github.com/battleaxedotco/bombino-brutalism-vuex)
 
 ![](./src/assets/vuex.png)
-
----
