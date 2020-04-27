@@ -2,7 +2,7 @@
 
 Online version of the [brutalism-api panel](https://github.com/battleaxedotco/brutalism-api) to demonstrate [Battleaxe's brutalism component library](https://github.com/battleaxedotco/brutalism) and templates with the [bombino Vue-CLI tooling](https://github.com/Inventsable/bombino).
 
-> In all screenshots below, the left is Illustrator, center is browser, and right is After effects. Same code, same functionality.
+> In all screenshots below, the left is Illustrator, center is browser, and right is After Effects. Same code, same functionality. Brutalism templates come browser compatible out of the box, even including the `<Panelify>` component for displaying themselves in browser used below:
 
 ## API
 
