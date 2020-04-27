@@ -28,7 +28,6 @@ export default {
     }
   },
   mounted() {
-    console.log('Router mounted')
     window.addEventListener('message', (evt => {
       let trustedOrigins = [
         'https://zen-ramanujan-97e3d0.netlify.app',
