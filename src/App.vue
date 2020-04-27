@@ -10,7 +10,13 @@
 
 
 <script>
-export default {}
+export default {
+  mounted() {
+    window.addEventListener('message', (evt => {
+      console.log(evt);
+    }), false);
+  }
+}
 </script>
 
 <style>
