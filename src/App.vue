@@ -13,7 +13,7 @@
 export default {
   mounted() {
     window.addEventListener('message', (evt => {
-      console.log(evt);
+      console.log(evt.data, this.$route.path);
     }), false);
   }
 }
