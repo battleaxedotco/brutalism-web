@@ -16,7 +16,14 @@ export default {
       if (!/\{/.test(evt.data)) {
         console.log(evt.data, this.$route.path);
         if (evt.data !== this.$route.path)
-          this.$router.push(evt.data);
+          const self = this;
+          console.log('Force it to happen')
+          this.$nextTick(() => {
+            self.$router.push(evt.data);
+            self.$nextTick(() => {
+              console.log('New route is:', this.$route.path)
+            })
+          })
       }
     }), false);
   }
