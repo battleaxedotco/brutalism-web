@@ -3,6 +3,14 @@
     <div class="centered-wrapper">
       <div class="sample-wrapper">
         <router-view/>
+        <Button 
+          v-if="inIframe" 
+          icon="reload"
+          primary
+          class="refresh-btn" 
+          style="position: absolute;top: 10px;"
+          @click="refresh"
+        >Refresh panel</Button>
       </div>
     </div>
   </div>
@@ -10,24 +18,25 @@
 
 
 <script>
+import starlette from 'starlette'
+import { Button } from 'brutalism'
+
 export default {
+  computed: {
+    inIframe() {
+      return window.location !== window.parent.location
+    }
+  },
+  components: {
+    'Button': Button
+  },
   mounted() {
-    const self = this;
-    window.addEventListener('message', (evt => {
-      if (!/localhost|battleaxe.dev/.test(evt.origin)) return null;
-      if (!/\{/.test(evt.data)) {
-        // console.log(evt.data, this.$route.path);
-        if (evt.data !== this.$route.path)
-          // console.log('Force it to happen')
-          this.$nextTick(() => {
-            if (evt.data !== self.$route.path)
-              self.$router.push(evt.data);
-            self.$nextTick(() => {
-              // console.log('New route is:', this.$route.path)
-            })
-          })
-      }
-    }), false);
+    starlette.initAs('ILST', 'darkest');
+  },
+  methods: {
+    refresh() {
+      location.reload();
+    }
   }
 }
 </script>
@@ -40,9 +49,14 @@ export default {
   text-align: center;
 }
 
+.refresh-btn {
+  
+}
+
 :root, body, html, #app {
   overflow: hidden;
   height: 100%;
+  background: transparent !important;
 }
 
 :root, html, body {
