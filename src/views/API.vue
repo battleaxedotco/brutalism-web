@@ -1,5 +1,6 @@
 <template>
   <Panelify 
+    debug
     :route="hashPath" 
     name="brutalism-api" 
     app="ILST" 
@@ -10,6 +11,7 @@
 
 <script>
 import { Panelify } from 'brutalism'
+// import Panelify from '@/components/Panelify'
 
 export default {
   name: 'Home',
@@ -23,6 +25,7 @@ export default {
     }
   },
   mounted() {
+    console.log('Hi there')
     window.addEventListener('message', (evt => {
       let trustedOrigins = [
         'https://zen-ramanujan-97e3d0.netlify.app',

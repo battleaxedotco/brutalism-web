@@ -31,19 +31,7 @@ export default {
     'Button': Button
   },
   mounted() {
-    // console.log(document.location.href)
     starlette.initAs('ILST', 'darkest');
-    // if (this.inIframe) {
-    //   window.parent.postMessage(document.location.href, '*', false)
-    //   window.addEventListener('message', (data) => {
-    //     // console.log('Received message:', data)
-    //     if (data !== 'refresh') return null;
-    //     else {
-    //       window.reload();
-    //       location.reload();
-    //     }
-    //   })
-    // }
   },
   methods: {
     refresh() {
@@ -59,10 +47,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-}
-
-.refresh-btn {
-  
 }
 
 :root, body, html, #app {

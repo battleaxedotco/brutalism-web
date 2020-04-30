@@ -8,7 +8,7 @@
     "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
   },
   "dependencies": {
-    "brutalism": "latest",
+    "brutalism": "^1.3.3",
     "core-js": "^3.6.4",
     "panelify": "^1.1.0",
     "starlette": "latest",

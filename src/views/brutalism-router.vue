@@ -1,5 +1,6 @@
 <template>
   <Panelify 
+    debug
     :url="url"
     :route="hashPath" 
     name="brutalism-router" 
@@ -12,6 +13,7 @@
 
 <script>
 import { Panelify } from 'brutalism'
+// import Panelify from '@/components/Panelify'
 
 export default {
   name: 'Router',
