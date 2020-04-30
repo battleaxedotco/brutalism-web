@@ -87,7 +87,7 @@ export default {
   height: 100%;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  /* padding: 10px; */
 }
 .sample-wrapper {
   max-height: 700px;
