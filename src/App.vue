@@ -76,7 +76,7 @@ export default {
 .sample-wrapper {
   max-height: 700px;
   max-width: 800px;
-  min-width: 400px;
+  min-width: 300px;
   min-height: 200px;
   display: flex;
   flex-wrap: wrap;

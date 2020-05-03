@@ -1,6 +1,5 @@
 <template>
   <Panelify 
-    debug
     :url="url"
     route="" 
     name="brutalism-basic" 
